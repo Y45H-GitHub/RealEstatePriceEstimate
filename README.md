@@ -1,7 +1,3 @@
-Here’s a README file template for your project:
-
----
-
 # Real Estate Price Prediction
 
 ## Project Overview
