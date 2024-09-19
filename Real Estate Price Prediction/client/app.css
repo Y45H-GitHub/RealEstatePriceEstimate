@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f2f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+   
+    font-size: 16px;
+    color: #333;
+}
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;  /* Reduce the maximum width */
+    width: 100%;  /* Ensures it adjusts to the screen size */
+    text-align: center;
+    margin: 0 20px; /* Adds margin for small screens */
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    font-size: 16px;
+    transition: border-color 0.2s ease-in;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #a5a5a5;
+    outline: none;
+}
+
+.switch-field {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+}
+
+.switch-field input {
+    display: none;
+}
+
+.switch-field label {
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    flex: 1; /* Makes labels take up equal space */
+    text-align: center;
+    margin: 4px; /* Adds space between buttons */
+}
+
+.switch-field input:checked + label {
+    background-color: #0071e3;
+    color: white;
+    border-color: #0071e3;
+}
+
+button.submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #0071e3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button.submit:hover {
+    background-color: #005bb5;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f1f9ff;
+    color: #333;
+    border: 1px solid #b0d9ff;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.img {
+    background: url('https://images.unsplash.com/photo-1725109431834-bed0465b6302?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-repeat: no-repeat;
+    background-size: auto;
+    background-size:100% 100%;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(15px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+
+/* URLS  */
+.social-links {
+    position: fixed; /* Fixed position to keep them in the corner */
+    top: 10px; /* Adjust top spacing */
+    right: 10px; /* Adjust right spacing */
+    z-index: 1000; /* Ensures they stay on top of other elements */
+}
+
+.social-links a {
+    color: #fff; /* White color for the icons */
+    font-size: 24px; /* Size of the icons */
+    margin-left: 15px; /* Space between icons */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.social-links a:hover {
+    color: #0077b5; /* Change color on hover (LinkedIn blue as an example) */
+}
+
+.social-links a:first-child:hover {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+.social-links a:last-child:hover {
+    color: #ffa116; /* Custom color for LeetCode */
+}
+
+
+/* Responsive Media Queries */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px; /* Reduce the font size slightly */
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 320px; /* Make the container smaller for mobile */
+    }
+
+    .switch-field {
+        flex-direction: column; /* Stack switches on smaller screens */
+    }
+
+    .switch-field label {
+        margin: 8px 0; /* Space them evenly when stacked */
+    }
+}
